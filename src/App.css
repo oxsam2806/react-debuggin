@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f172a;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 60px 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.subtitle {
+  color: #22c55e;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+header h1 {
+  font-size: 48px;
+  margin: 15px 0;
+}
+
+.intro {
+  color: #94a3b8;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+section {
+  max-width: 600px;
+  margin: auto;
+}
+
+.profile-card {
+  background: white;
+  color: #111827;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.profile-card h2 {
+  color: #2563eb;
+  font-size: 30px;
+  margin-top: 0;
+}
+
+.profile-card p {
+  color: #64748b;
+  font-size: 17px;
+}
+
+.main-button {
+  display: block;
+  margin: 0 auto 30px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 13px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.main-button:hover {
+  background: #1d4ed8;
+}
+
+.counter {
+  background: #1e293b;
+  text-align: center;
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.counter h2 {
+  margin-top: 0;
+}
+
+.counter-number {
+  font-size: 50px;
+  font-weight: bold;
+  color: #22c55e;
+  margin: 20px;
+}
+
+.counter button {
+  background: #22c55e;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 45px;
+  margin: 5px;
+  border-radius: 8px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.counter button:hover {
+  background: #16a34a;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 36px;
   }
 }

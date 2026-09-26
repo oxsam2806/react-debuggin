@@ -1,23 +1,52 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+
+import UserProfile from "./components/UserProfile";
+import Counter from "./components/Counter";
+
+import "./App.css";
 
 function App() {
+  const [name, setName] = useState("Samuel");
+
+  const changeName = () => {
+    setName("Christinah");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+    <div className="app">
+
+      <header>
+        <p className="subtitle">
+          REACT DEVELOPER TOOLS
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        <h1>Debugging Practice</h1>
+
+        <p className="intro">
+          Inspect the components, props and state
+          using React Developer Tools.
+        </p>
       </header>
+
+      <section>
+
+        <UserProfile
+          name={name}
+          profession="Full Stack Software Engineer"
+          age={26}
+        />
+
+        <button
+          className="main-button"
+          onClick={changeName}
+        >
+          Change Name
+        </button>
+
+        <Counter />
+
+      </section>
+
     </div>
   );
 }
